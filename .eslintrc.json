@@ -1,0 +1,17 @@
+{
+	"env": {
+    		"node": true,
+		"jest": true,
+		"browser": true,
+		"es6": true
+    	},
+	"globals": {
+		"__DEV__": true,
+		"__PROD__": true
+	},
+	"parser": "babel-eslint",
+  "extends": "airbnb",
+	"rules": {
+  	"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+	}
+}

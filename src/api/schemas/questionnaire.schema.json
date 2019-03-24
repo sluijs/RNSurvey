@@ -1,0 +1,242 @@
+{
+ "definitions": {},
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "$id": "https://localhost/questionnaire.schema.json",
+ "type": "object",
+ "title": "FETCH_QUESTIONNAIRE_SCHEMA",
+ "description": "Server response from fetching a questionnaire.",
+ "required": [
+   "data"
+ ],
+ "properties": {
+   "data": {
+     "$id": "#/properties/data",
+     "type": "object",
+     "title": "DATA_SCHEMA",
+     "description": "The data property of the server response.",
+     "required": [
+       "questionnaire"
+     ],
+     "properties": {
+       "questionnaire": {
+         "$id": "#/properties/data/properties/questionnaire",
+         "type": "object",
+         "title": "QUESTIONNAIRE_SCHEMA",
+         "required": [
+           "questionnaire_id",
+           "questions"
+         ],
+         "properties": {
+           "questionnaire_id": {
+             "$id": "#/properties/data/properties/questionnaires/items/properties/questionnaire_id",
+             "type": "integer",
+             "title": "The Questionnaire_id Schema",
+             "minimum": 1
+           },
+           "questions": {
+             "$id": "#/properties/data/properties/questionnaires/items/properties/questions",
+             "type": "array",
+             "title": "The Questions Schema",
+             "items": {
+               "$id": "#/properties/data/properties/questionnaires/items/properties/questions/items",
+               "type": "object",
+               "title": "The Items Schema",
+               "oneOf": [{
+                  "properties": {
+                    "question_id": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "type": {
+                      "type": "integer",
+                      "enum": [1, 2, 5]
+                    },
+                    "title": {
+                      "type": "string",
+                      "default": ""
+                    },
+                    "description": {
+                      "type": "string",
+                      "default": ""
+                    },
+                    "obligatory": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "min_value": {
+                      "type": "integer"
+                    },
+                    "default_value": {
+                      "type": "integer"
+                    },
+                    "max_value": {
+                      "type": "integer"
+                    },
+                    "placeholder": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "question_id",
+                    "type",
+                    "title",
+                    "description",
+                    "obligatory",
+                    "min_value",
+                    "max_value"
+                  ]
+               },
+               {
+                  "properties": {
+                    "question_id": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "type": {
+                      "type": "integer",
+                      "enum": [3, 9]
+                    },
+                    "title": {
+                      "type": "string",
+                      "default": ""
+                    },
+                    "description": {
+                      "type": "string",
+                      "default": ""
+                    },
+                    "obligatory": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "options": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "option_id": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "description": {
+                            "type": "string",
+                            "default": ""
+                          }
+                        },
+                        "required": ["option_id", "description"]
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
+                    },
+                    "default_option": {
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  },
+                  "required": [
+                    "question_id",
+                    "type",
+                    "title",
+                    "description",
+                    "obligatory",
+                    "options",
+                    "default_option"
+                  ]
+               },
+               {
+                  "properties": {
+                    "question_id": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "type": {
+                      "type": "integer",
+                      "enum": [8, 10]
+                    },
+                    "title": {
+                      "type": "string",
+                      "default": ""
+                    },
+                    "description": {
+                      "type": "string",
+                      "default": ""
+                    },
+                    "obligatory": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  },
+                  "required": [
+                    "question_id",
+                    "type",
+                    "title",
+                    "description",
+                    "obligatory"
+                  ]
+               },
+               {
+                  "properties": {
+                    "question_id": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "type": {
+                      "type": "integer",
+                      "enum": [4]
+                    },
+                    "title": {
+                      "type": "string",
+                      "default": ""
+                    },
+                    "description": {
+                      "type": "string",
+                      "default": ""
+                    },
+                    "obligatory": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "options": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "option_id": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "description": {
+                            "type": "string",
+                            "default": ""
+                          }
+                        },
+                        "required": ["option_id", "description"]
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
+                    },
+                    "default_options": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "question_id",
+                    "type",
+                    "title",
+                    "description",
+                    "obligatory",
+                    "options",
+                    "default_options"
+                  ]
+               }]
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+}

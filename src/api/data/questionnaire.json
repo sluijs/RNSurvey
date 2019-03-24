@@ -1,0 +1,295 @@
+{
+  "data": {
+    "questionnaire": {
+      "questionnaire_id": 2,
+      "questions": [
+        {
+          "question_id": 17,
+          "type": 5,
+          "title": "Ritnummer 1",
+          "description": "Wat is het ritnummer van de huidige rit (alleen cijfers, zonder datum en regio)?",
+          "obligatory": true,
+          "min_value": 1,
+          "default_value": 999,
+          "max_value": 999999,
+          "placeholder": 123
+        },
+        {
+          "question_id": 18,
+          "type": 5,
+          "title": "Ritnummer 2",
+          "description": "Wat is het ritnummer van de huidige rit (alleen cijfers, zonder datum en regio)?",
+          "obligatory": true,
+          "min_value": 1,
+          "max_value": 999999
+        },
+        {
+          "question_id": 19,
+          "type": 5,
+          "title": "Ritnummer 3",
+          "description": "Wat is het ritnummer van de huidige rit (alleen cijfers, zonder datum en regio)?",
+          "obligatory": true,
+          "min_value": 1,
+          "default_value": 999,
+          "max_value": 999999
+        },
+        {
+          "question_id": 20,
+          "type": 5,
+          "title": "Ritnummer 4",
+          "description": "Wat is het ritnummer van de huidige rit (alleen cijfers, zonder datum en regio)?",
+          "obligatory": true,
+          "min_value": 1,
+          "max_value": 999999,
+          "placeholder": 123
+        },
+        {
+          "question_id": 21,
+          "type": 5,
+          "title": "Ritnummer 5",
+          "description": "Wat is het ritnummer van de huidige rit (alleen cijfers, zonder datum en regio)?",
+          "obligatory": false,
+          "min_value": 1,
+          "default_value": 999,
+          "max_value": 999999,
+          "placeholder": 123
+        },
+        {
+          "question_id": 22,
+          "type": 5,
+          "title": "Ritnummer 6",
+          "description": "Wat is het ritnummer van de huidige rit (alleen cijfers, zonder datum en regio)?",
+          "obligatory": false,
+          "min_value": 1,
+          "max_value": 999999
+        },
+        {
+          "question_id": 23,
+          "type": 5,
+          "title": "Ritnummer 7",
+          "description": "Wat is het ritnummer van de huidige rit (alleen cijfers, zonder datum en regio)?",
+          "obligatory": false,
+          "min_value": 1,
+          "default_value": 999,
+          "max_value": 999999
+        },
+        {
+          "question_id": 24,
+          "type": 5,
+          "title": "Ritnummer 8",
+          "description": "Wat is het ritnummer van de huidige rit (alleen cijfers, zonder datum en regio)?",
+          "obligatory": false,
+          "min_value": 1,
+          "max_value": 999999,
+          "placeholder": 123
+        },
+        {
+          "question_id": 11,
+          "type": 3,
+          "title": "Eigen inschatting",
+          "description": "Denkt u dat de patiënt om medische redenen recht heeft op zorg in een level-1 traumacentrum?",
+          "obligatory": true,
+          "options": [
+            {
+              "option_id": 1,
+              "description": "Ja"
+            },
+            {
+              "option_id": 2,
+              "description": "Nee"
+            }
+          ],
+          "default_option": 2
+        },
+        {
+          "question_id": 1,
+          "type": 1,
+          "title": "Leeftijd",
+          "description": "Wat is de (geschatte) leeftijd van de patiënt (in jaren)?",
+          "obligatory": true,
+          "min_value": 18,
+          "default_value": 25,
+          "max_value": 110
+        },
+        {
+          "question_id": 12,
+          "type": 1,
+          "title": "Systolische bloeddruk",
+          "description": "Wat is de systolische bloeddruk? Vul een getal in tussen 30 en 220.",
+          "obligatory": true,
+          "min_value": 30,
+          "default_value": 120,
+          "max_value": 220
+        },
+        {
+          "question_id": 3,
+          "type": 1,
+          "title": "Glascow Coma Scale",
+          "description": "Vul hier de Glascow Coma Scale in als een getal tussen 3 en 15.",
+          "obligatory": true,
+          "min_value": 3,
+          "default_value": 15,
+          "max_value": 15
+        },
+        {
+          "question_id": 13,
+          "type": 3,
+          "title": "Traumamechanisme",
+          "description": "Is er sprake van een van de volgende traumamechanismen?",
+          "obligatory": true,
+          "options": [
+            {
+              "option_id": 3,
+              "description": "Val van hoger dan 2 meter"
+            },
+            {
+              "option_id": 4,
+              "description": "Motorongeluk >30 km/uur"
+            },
+            {
+              "option_id": 5,
+              "description": "Beknelling"
+            },
+            {
+              "option_id": 12,
+              "description": "Geen van de bovenstaande"
+            }
+          ],
+          "default_option": 12
+        },
+        {
+          "question_id": 6,
+          "type": 3,
+          "title": "Letselaard",
+          "description": "Is er sprake van penetrerend letsel van het hoofd, de thorax en/of het abdomen?",
+          "obligatory": true,
+          "options": [
+            {
+              "option_id": 1,
+              "description": "Ja"
+            },
+            {
+              "option_id": 2,
+              "description": "Nee"
+            }
+          ],
+          "default_option": 2
+        },
+        {
+          "question_id": 7,
+          "type": 4,
+          "title": "Letsels",
+          "description": "Vink de regio's aan waarin u ernstige letsels verwacht. U kunt meerdere regio's kiezen. Het is ook mogelijk geen regio te kiezen.",
+          "obligatory": false,
+          "options": [
+            {
+              "option_id": 6,
+              "description": "Hoofd"
+            },
+            {
+              "option_id": 7,
+              "description": "Gezicht met nek"
+            },
+            {
+              "option_id": 8,
+              "description": "Thorax"
+            },
+            {
+              "option_id": 9,
+              "description": "Abdomen"
+            },
+            {
+              "option_id": 10,
+              "description": "Bekken"
+            },
+            {
+              "option_id": 11,
+              "description": "Extremiteiten"
+            }
+          ],
+          "default_options": []
+        },
+        {
+          "question_id": 9,
+          "type": 8,
+          "title": "Score",
+          "description": "Van een groep patïenten met deze kenmerken heeft het onderstaande percentage ernstig letsel en recht op level-1 traumazorg.",
+          "obligatory": false
+        },
+        {
+          "question_id": 16,
+          "type": 10,
+          "title": "Advies",
+          "description": "Op basis van de score en de afkapwaarde in uw regio wordt het onderstaande type ziekenhuis geadviseerd.",
+          "obligatory": false
+        },
+        {
+          "question_id": 14,
+          "type": 3,
+          "title": "Eigen inschatting",
+          "description": "Is uw eigen inschatting veranderd na gebruik van de app?",
+          "obligatory": true,
+          "options": [
+            {
+              "option_id": 1,
+              "description": "Ja"
+            },
+            {
+              "option_id": 2,
+              "description": "Nee"
+            }
+          ],
+          "default_option": 2
+        },
+        {
+          "question_id": 10,
+          "type": 9,
+          "title": "Bestemming",
+          "description": "Naar welk ziekenhuis vervoert u de patiënt?",
+          "obligatory": true,
+          "options": [
+            {
+              "option_id": 13,
+              "description": "Level-1"
+            },
+            {
+              "option_id": 14,
+              "description": "Overig"
+            }
+          ],
+          "default_option": 2
+        },
+        {
+          "question_id": 15,
+          "type": 4,
+          "title": "Afwijken bestemming",
+          "description": "U kunt hier reden(en) aangeven indien uw bestemming afwijkt van uw eigen inschatting. U kunt ook niets invullen.",
+          "obligatory": true,
+          "options": [
+            {
+              "option_id": 15,
+              "description": "Tijd tot ziekenhuis"
+            },
+            {
+              "option_id": 16,
+              "description": "Capaciteit van ziekenhuis"
+            },
+            {
+              "option_id": 17,
+              "description": "Toestand van de patiënt"
+            },
+            {
+              "option_id": 18,
+              "description": "Voorkeur patiënt"
+            },
+            {
+              "option_id": 14,
+              "description": "Overig"
+            }
+          ],
+          "default_options": []
+        }
+      ]
+    }
+  }
+}
