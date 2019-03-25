@@ -64,9 +64,11 @@ The `type` attribute of a question indicates which layout and _IO_ component RNS
 RNSurvey is based on three containers (components that are connected to the Redux store) internally: _HeaderContainer_, _FooterContainer_, and _QuestionnaireContainer_. Both the HeaderContainer and the FooterContainer are mainly concerned with navigation. The QuestionnaireContainer contains most of the logic that deals with the actual survey. Its main purpose is to provide the `<QuestionPicker>` component with the right props. 
 
 __Creating a question layout__
+
 If you want to create a new question layout (e.g. an alternative to `<BasicQuestion>`), make sure to add it to the `<QuestionPicker>` component. This component can then decide which layout to draw based on the `type` property of the question.
 
 __Creating an _IO_ component__
+
 RNSurvey is flexible such that it easily allows for new _IO_ components. If you create a new _IO_ component, make sure to give it a unique _type_ property. Once created, you should make sure that your question layout (e.g. `<BasicQuestion>`) knows when to render this _IO_ component.
 
 ## Licensing
