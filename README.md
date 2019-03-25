@@ -12,7 +12,7 @@ RNSurvey is a React Native application that adds JSON-based surveys to Android a
 
 1. Clone this repository: `git clone https://github.com/sluijs/RNSurvey.git`. 
 
-2. Install the dependencies: `yarn add` or `npm install`. RNSurvey has few dependencies, but needs [ajv](https://github.com/epoberezkin/ajv) and [redux](https://github.com/reduxjs/redux) to function properly.
+2. Install the dependencies: `yarn add` or `npm install`. RNSurvey has few dependencies, but needs __[ajv](https://github.com/epoberezkin/ajv)__ and __[redux](https://github.com/reduxjs/redux)__ to function properly.
 
 3. Run `npm start` and `react-native run-ios` or `react-native run-android` to start the application.
 
@@ -47,9 +47,9 @@ You could create a survey with one slider question like this:
   }
 }     
 ```
-An example covering all available question types is available __[here](src/api/data/questionnaire.json)__. 
+An example covering all available question types can be found __[here](src/api/data/questionnaire.json)__. 
 
-The `type` attribute of a question indicates which layout and _IO_ component RNSurvey will draw. RNSurvey uses the [`<QuestionPicker>`](src/components/Questions/Picker/Picker.js) component internally to choose a layout for the question. This repository contains one simple layout: [`<BasicQuestion>`](src/components/Questions/Basic/Basic.js], but you could easily add your own question layouts in this manner. `<BasicQuestion>` is responsible to draw the right _IO_ component to enable the user to interact with the survey. A couple of _IO_ components are currently included: 
+The `type` attribute of a question indicates which layout and _IO_ component RNSurvey will draw. RNSurvey uses the [`<QuestionPicker>`](src/components/Questions/Picker/Picker.js) component internally to choose a layout for the question. This repository contains one simple layout: [`<BasicQuestion>`](src/components/Questions/Basic/Basic.js), but you could easily add your own question layouts in this manner. `<BasicQuestion>` is responsible to draw the right _IO_ component to enable the user to interact with the survey. A couple of _IO_ components are currently included: 
 
 * __`Numeric slider`__: Slide between a minimum value and a maximum value. You can set a default value to start with. The according question type is 1.
 
@@ -70,6 +70,10 @@ If you want to create a new question layout (e.g. an alternative to `<BasicQuest
 __Creating an _IO_ component__
 
 RNSurvey is flexible such that it easily allows for new _IO_ components. If you create a new _IO_ component, make sure to give it a unique _type_ property. Once created, you should make sure that your question layout (e.g. `<BasicQuestion>`) knows when to render this _IO_ component.
+
+__Downloading and submitting questionnaires__
+
+If you do not want to include the JSON-template for the survey in the RNSurvey component, you have two options: fetch it from a remote server, or passing it to RNSurvey via its props. If you want to fetch it from a remote server, I'd recommend to use __[Redux Thunk](https://github.com/reduxjs/redux-thunk)__. You can find a tutorial on how to pass information between native and React Native components __[here](https://facebook.github.io/react-native/docs/communication-ios)__. 
 
 ## Licensing
 [GPLv3](LICENSE)
