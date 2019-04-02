@@ -12,6 +12,7 @@ import { ScrollView, Text, View } from 'react-native';
 
 // Third-party
 import PropTypes from 'prop-types';
+import * as Animatable from 'react-native-animatable';
 
 // Components
 import Slider from '../../IO/Slider/Slider';
@@ -129,12 +130,12 @@ const BasicQuestion = ({
           contentContainerStyle={styles.description}
           alwaysBounceVertical={false}
         >
-          <Text style={styles.text}>
+          <Animatable.Text animation="slideInLeft" duration={350} style={styles.text}>
             {description}
-          </Text>
+          </Animatable.Text>
         </ScrollView>
       </View>
-      <View style={styles.io}>
+      <Animatable.View animation="slideInRight" duration={350} style={styles.io}>
         {[1].includes(type) && renderSlider(
           q.min_value, // minValue
           a[0] ? a[0].value : q.default_value, // value
@@ -166,7 +167,7 @@ const BasicQuestion = ({
           q.placeholder, // placeholder
           val => actions.setAnswer(questionId, val), // cb
         )}
-      </View>
+      </Animatable.View>
     </View>
   );
 };
