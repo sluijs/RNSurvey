@@ -57,6 +57,7 @@ class BasicList extends Component {
             return { selected };
           });
         }}
+        radio={single}
       />
     );
   };

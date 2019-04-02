@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
     paddingRight: 8,
   },
   text: {
+    // Offset
+    paddingLeft: 16,
+    // Text
     fontSize: 16,
   },
   active: {
