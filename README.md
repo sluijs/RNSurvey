@@ -80,4 +80,3 @@ If you do not want to include the JSON-template for the survey in the RNSurvey c
 
 ## Contact
 * Author: Rogier van der Sluijs
-* Email: r.vander[GITHUB_USERNAME]@icloud.com.
